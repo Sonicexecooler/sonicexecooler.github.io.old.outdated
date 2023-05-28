@@ -1,0 +1,24 @@
+<script src="core/ruffle.js"></script>
+    
+        <div id='ruffle'></div>
+        
+        <p>This is a test page for Adobe Flash content</p>
+        
+    </body>
+    
+    <script>
+    
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("DOMContentLoaded", start_Ruffle, false );
+        
+        function start_Ruffle()
+        {
+            let ruffle = window.RufflePlayer.newest();
+            let player = ruffle.createPlayer();
+            let container = document.getElementById("ruffle");
+            container.appendChild(player);
+            player.load("https://flash-games.penguinbotcoder.repl.co/flashgames/thinice.swf");
+            
+        }
+        
+    </script>
